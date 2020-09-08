@@ -5,7 +5,7 @@ import * as CdkLocalTest from '../lib/cdk-local-test-stack';
 test('Empty Stack', () => {
     const app = new cdk.App();
     // WHEN
-    const stack = new CdkLocalTest.CdkLocalTestStack(app, 'MyTestStack');
+    const stack = new CdkLocalTest.SampleProjectStack(app, 'SampleProjectStack');
     // THEN
     expectCDK(stack).to(matchTemplate({
       "Resources": {}
