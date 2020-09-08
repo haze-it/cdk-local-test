@@ -23,9 +23,12 @@ export class SampleProjectStack extends cdk.Stack {
             restApiName: "sampleApi"
         });
 
-        console.log("UNKO!!!!!!!!!!!!!!!!!!!!");
         const samplesResource = sampleApi.root.addResource("samples");
         const getSamplesIntegration = new apigateway.LambdaIntegration(sampleLambda);
         samplesResource.addMethod("GET", getSamplesIntegration);
     }
 }
+
+const app = new cdk.App();
+new SampleProjectStack(app, 'SampleProjectStack');
+app.synth();

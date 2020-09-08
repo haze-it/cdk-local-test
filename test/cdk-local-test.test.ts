@@ -1,6 +1,6 @@
 import { expect as expectCDK, matchTemplate, MatchStyle } from '@aws-cdk/assert';
 import * as cdk from '@aws-cdk/core';
-import * as CdkLocalTest from '../lib/cdk-local-test-stack';
+import * as CdkLocalTest from '../lib/index';
 
 test('Empty Stack', () => {
     const app = new cdk.App();
